@@ -3,9 +3,10 @@
     "imageid":"ubuntu"
   },
   "environment":{
-    "uilayout":"editor-terminal",
-    "showdashboard":true
+    "uilayout":"terminal"
   },
   "title":"OpenTracing Python Tutorial",
-  "description":"Learn basics of OpenTracing"
+  "description":"Learn basics of OpenTracing",
+  "difficulty":"Beginner",
+  "time":"10 minutes"
 }
