@@ -3,6 +3,9 @@
     "imageid":"ubuntu"
   },
   "environment":{
-    "uilayout":"editor-terminal"
-  }
+    "uilayout":"editor-terminal",
+    "showdashboard":true
+  },
+  "title":"OpenTracing Python Tutorial",
+  "description":"Learn basics of OpenTracing"
 }
