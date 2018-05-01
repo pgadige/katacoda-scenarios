@@ -1,0 +1,8 @@
+{
+  "backend":{
+    "imageid":"ubuntu"
+  },
+  "environment":{
+    "uilayout":"editor-terminal"
+  }
+}
