@@ -1,3 +1,5 @@
+rm -rf /root/opentracing-tutorial &&
+
 git clone https://github.com/yurishkuro/opentracing-tutorial.git &&
 
 cd /root/opentracing-tutorial/python &&
