@@ -1,0 +1,26 @@
+{
+  "backend":{
+    "imageid":"ubuntu"
+  },
+  "environment":{
+    "uilayout":"editor-terminal"
+  },
+  "details":{
+    "intro":{
+      "text":"introduction.md"
+    },
+    "steps":[
+      {
+        "title":"Hello World!",
+        "text":"step-00.md"
+      }
+    ],
+    "finish":{
+      "text":"end.md"
+    }
+  },
+  "title":"Example Katacoda Scenario",
+  "description":"Learn basics of Katacoda",
+  "difficulty":"Beginner",
+  "time":"5 minutes"
+}
