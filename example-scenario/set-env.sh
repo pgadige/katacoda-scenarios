@@ -1,1 +1,3 @@
-mkdir examples && cd examples
+mkdir -p /root/examples &&
+
+cd /root/examples
