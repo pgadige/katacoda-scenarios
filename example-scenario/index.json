@@ -3,11 +3,13 @@
     "imageid":"ubuntu"
   },
   "environment":{
-    "uilayout":"editor-terminal"
+    "uilayout":"editor-terminal",
+    "uieditorpath":"/root/examples"
   },
   "details":{
     "intro":{
-      "text":"introduction.md"
+      "text":"introduction.md",
+      "code":"set-env.sh"
     },
     "steps":[
       {
