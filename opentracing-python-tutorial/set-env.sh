@@ -2,15 +2,13 @@ rm -rf /root/opentracing-tutorial &&
 
 git clone https://github.com/yurishkuro/opentracing-tutorial.git &&
 
-cd /root/opentracing-tutorial/python &&
+cd /root/opentracing-tutorial/python && clear &&
 
 python2.7 -m pip install -r requirements.txt &&
 
 mkdir -p lesson01/exercise &&
 
 cd ./lesson01/exercise &&
-
-clear &&
 
 docker run -d -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
 -p 5775:5775/udp \
