@@ -4,7 +4,9 @@
   },
   "environment":{
     "uilayout":"editor-terminal",
-    "uieditorpath":"/root/opentracing-tutorial/python/lesson01"
+    "uieditorpath":"/root/opentracing-tutorial/python/lesson01",
+    "showdashboard":true,
+    "dashboards":[{"name":"Jaeger UI", "port":16686}]
   },
   "details":{
     "intro":{
@@ -14,7 +16,7 @@
     },
     "steps":[
       {
-        "title":"Hello World!",
+        "title":"Quick Hello World Example",
         "text":"step-00.md"
       }
     ],
