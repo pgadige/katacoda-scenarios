@@ -3,13 +3,13 @@
     "imageid":"ubuntu"
   },
   "environment":{
-    "uilayout":"editor-terminal",
-    "uieditorpath":"/root/opentracing-tutorial/python/lesson01/exercise"
+    "uilayout":"editor-terminal"
   },
   "details":{
     "intro":{
       "text":"introduction.md",
-      "code":"set-env.sh"
+      "code":"set-env.sh",
+      "credits":"This tutorial is inspired by [Yurishkuro's OpenTracing Tutorial](https://github.com/yurishkuro/opentracing-tutorial)"
     },
     "steps":[
       {
