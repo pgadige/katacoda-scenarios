@@ -30,3 +30,8 @@ We run the above program with an argument, say `Alice`,
 
 We must see the output as:  
 `Hello, Alice!`
+
+Let's instrument the above code to illustrate the features of     
+OpenTracing(an opensource standard for distributed tracing) using   
+Jaeger(an opensource distributed tracing system). You may also use other   
+tracing systems, such as, Zipkin, Lightstep etc.
