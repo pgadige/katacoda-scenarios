@@ -1,5 +1,32 @@
-click below to open an empty file
+# Quick Hello World Example
+
+Let's write a simple Python program to print "Hello, `arg`!", where   
+`arg` is a command line argument to the program.
+
+Click the link below to open `hello.py` in the editor.  
 `exercise/hello.py`{{open}}
 
-verify that `hello.py` is created in `/root/opentracing-tutorial/python/lesson01/exercise`
-directory.
+Once the file is opened in the editor, you can then copy the content  
+below into the file (or use the `Copy to editor` button):
+
+<pre class="file" data-filename="exercise/hello.py" data-target="replace">
+## hello.py
+## simple hello world program
+
+import sys
+
+def say_hello(hello_to):
+  hello_str = 'Hello, %s!' % hello_to
+  print hello_str
+
+assert len(sys.argv) == 2
+
+hello_to = sys.argv[1]
+say_hello(hello_to)
+</pre>
+
+We run the above program with an argument, say `Alice`,  
+`$ python2.7 hello.py Alice`{{execute}}
+
+We must see the output as:  
+`Hello, Alice!`
