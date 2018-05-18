@@ -18,6 +18,10 @@
       {
         "title":"Quick Hello World Example",
         "text":"step-00.md"
+      },
+      {
+        "title":"Initialize the Tracer",
+        "text":"initialize-tracer.md"
       }
     ],
     "finish":{
