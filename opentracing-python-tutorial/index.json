@@ -4,7 +4,7 @@
   },
   "environment":{
     "uilayout":"editor-terminal",
-    "uieditorpath":"/root/opentracing-tutorial/python"
+    "uieditorpath":"/root/opentracing-tutorial/python/lesson01"
   },
   "details":{
     "intro":{
