@@ -10,10 +10,7 @@ we can easily parameterize the Tracer.
 We define a function that returns the Tracer and call that function  
 explicitly after all imports are done.
 
-Click to Open the file `exercise/hello.py` and copy the content below  
-into `hello.py` (or use the `Copy to Editor` button):
-
-<pre class="file" data-filename="exercise/hello.py" data-target="replace">
+<pre class="file" data-target="clipboard">
 ## File:hello-world.py
 ## Initialize Jaeger Tracer
 ## using Jaeger Python client
@@ -47,3 +44,5 @@ We create a `tracer` instance with the sevice name `hello-world`, which
 is passed as an argument to `init_jaeger_tracer` function.
 Thus, all spans emitted from the tracer are marked as originating from   
 the service `hello-world`.
+
+We have now successfully initialized an instance of Jaeger tracer.
