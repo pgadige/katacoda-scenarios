@@ -22,6 +22,10 @@
       {
         "title":"Initialize the Tracer",
         "text":"initialize-tracer.md"
+      },
+      {
+        "title":"Create a Trace",
+        "text":"create-trace.md"
       }
     ],
     "finish":{
