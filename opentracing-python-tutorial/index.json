@@ -3,7 +3,8 @@
     "imageid":"ubuntu"
   },
   "environment":{
-    "uilayout":"editor-terminal"
+    "uilayout":"editor-terminal",
+    "uieditorpath":"/root/opentracing-tutorial/python"
   },
   "details":{
     "intro":{
