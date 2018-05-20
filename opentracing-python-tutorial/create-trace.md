@@ -103,7 +103,7 @@ tracer.close()
 
 We run the above program with command line argument, `Alice`, and should  
 be able to see a span logged:  
-`python2.7 hello-world.py Alice`{{execute}}
+`python2.7 hello.py Alice`{{execute}}
 
 A visual representation of the trace in the form of a timing diagram is  
 available through [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world).  
