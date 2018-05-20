@@ -1,8 +1,10 @@
 rm -rf /root/opentracing-tutorial &&
 
+python2.7 -m pip install futures &&
+
 git clone https://github.com/yurishkuro/opentracing-tutorial.git &&
 
-cd /root/opentracing-tutorial/python && clear &&
+cd /root/opentracing-tutorial/python &&
 
 python2.7 -m pip install -r requirements.txt &&
 
@@ -18,4 +20,6 @@ docker run -d -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
 -p 16686:16686 \
 -p 14268:14268 \
 -p 9411:9411 \
-jaegertracing/all-in-one:latest
+jaegertracing/all-in-one:latest &&
+
+clear
