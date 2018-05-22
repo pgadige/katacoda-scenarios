@@ -26,6 +26,10 @@
       {
         "title":"Create a Trace",
         "text":"create-trace.md"
+      },
+      {
+        "title":"Annotate a Trace",
+        "text":"annotate-trace.md"
       }
     ],
     "finish":{
