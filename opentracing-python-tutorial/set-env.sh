@@ -1,4 +1,4 @@
-rm -rf /root/opentracing-tutorial &&
+rm -r /root/opentracing-tutorial &&
 
 python2.7 -m pip install futures &&
 
