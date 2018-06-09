@@ -29,7 +29,7 @@
       }
     ],
     "finish":{
-      "text":"end.md"
+      "text":"conclusion.md"
     }
   },
   "title":"OpenTracing Python Tutorial - Lesson 02",
