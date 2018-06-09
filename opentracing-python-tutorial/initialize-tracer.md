@@ -1,6 +1,6 @@
 A trace is a directed acyclic graph of spans. A span is a logical  
 representation of some work done in your application. Each span has  
-these minimum attributes: an operation name, a start time, and a finish time.
+three essential attributes: an operation name, a start time, and a finish time.
 
 Let's create an instance of a real tracer, such as [Jaeger](http://github.com/uber/jaeger-client-python).
 
@@ -10,7 +10,7 @@ we can easily parameterize the Tracer.
 We define a function that returns the Tracer and call that function  
 explicitly after all imports are done.
 
-<pre class="file" data-target="clipboard">
+<pre class="file">
 ## File:hello-world.py
 ## Initialize Jaeger Tracer
 ## using Jaeger Python client
