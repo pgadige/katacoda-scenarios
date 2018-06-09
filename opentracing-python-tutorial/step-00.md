@@ -1,7 +1,8 @@
-Let's write a simple Python program to print "Hello, `arg`!", where   
+Let's write a simple python program to print "Hello, `arg`!", where   
 `arg` is a command line argument to the program.
 
-Click the link below to open `hello.py` in the editor.  
+Click the link below to open `hello.py` in the editor. The file is located at  
+`/root/opentracing-tutorial/python/lesson01/exercise`    
 `exercise/hello.py`{{open}}
 
 Once the file is opened in the editor, you can then copy the content  
@@ -23,15 +24,13 @@ hello_to = sys.argv[1]
 say_hello(hello_to)
 </pre>
 
-*Note:* Click anywhere in `hello.py` to save it.
-
 We run the above program with an argument, say `Alice`,  
 `python2.7 hello.py Alice`{{execute}}
 
-We must see the output as:  
+We should see the output as:  
 `Hello, Alice!`
 
 Let's instrument the above code to illustrate the features of     
-OpenTracing(an opensource standard for distributed tracing) using   
-Jaeger(an opensource distributed tracing system). You may also use other   
-tracing systems, such as, Zipkin, Lightstep etc.
+OpenTracing (an opensource standard for distributed tracing) using   
+Jaeger (an opensource distributed tracing system). You may also use other   
+tracing systems, such as, Zipkin, LightStep etc.

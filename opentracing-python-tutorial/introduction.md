@@ -1,4 +1,6 @@
-## OpenTracing Python Tutorial - Lesson 01
+OpenTracing is a single, vendor-neutral, standard mechanism to describe the  
+behaviour of our distributed systems. It allows developers of application code,  
+OSS packages and OSS services to instrument their own code.
 
 Before diving into the tutorial, ensure you are familiar with:
 
