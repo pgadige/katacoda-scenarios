@@ -1,8 +1,8 @@
 We use the Jaeger tracer instance initialized in the previous step    
 in our simple hello world program as follows:
 
-<pre class="file" data-target="clipboard">
-## File:hello-world.py
+<pre class="file">
+## File:hello.py
 
 def say_hello(hello_to):
 	## Create trace
@@ -20,11 +20,11 @@ We use the following basic features of the OpenTracing API:
   the tracer implementation, in this case, the Jaeger Tracer captures  
   the start and finish timestamps of each `span`
 
-It's tedious to call `finish()` manually on a given `span`. Instead, we  
+It's tedious to call `finish()` manually on each given `span`. Instead, we  
 can use `span` as context manager as shown below:
 
-<pre class="file" data-target="clipboard">
-## File:hello-world.py
+<pre class="file">
+## File:hello.py
 
 def say_hello(hello_to):
 	## span as context manager
@@ -34,10 +34,10 @@ def say_hello(hello_to):
 </pre>
 
 Since the program is short-lived and it exits immediately, we can flush  
-the span to Jaeger backend by adding the following to `hello-world.py`:
+the `span` to Jaeger backend by adding the following to `hello-world.py`:
 
-<pre class="file" data-target="clipboard">
-## File:hello-world.py
+<pre class="file">
+## File:hello.py
 ## Initialize Jaeger Tracer
 
 import time
@@ -54,8 +54,9 @@ time.sleep(2)
 tracer.close()
 </pre>
 
-We instrument the simple hello world program in `hello.py`. Copy the content  
-below into the file (or click `Copy to Editor` button):
+We instrument the simple hello world program in `hello.py`.
+
+Copy the content below into the file (or click `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
 ## a simple hello world program
@@ -106,6 +107,6 @@ be able to see a span logged:
 `python2.7 hello.py Alice`{{execute}}
 
 A visual representation of the trace in the form of a timing diagram is  
-available through [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world).  
+available through [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello).    
 We select the service name as `hello-world` and the operation name as  
 `say-hello` for accessing the corresponding timing diagram.
