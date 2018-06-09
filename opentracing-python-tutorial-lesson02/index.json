@@ -1,0 +1,39 @@
+{
+  "backend":{
+    "imageid":"ubuntu"
+  },
+  "environment":{
+    "uilayout":"editor-terminal",
+    "uieditorpath":"/root/opentracing-tutorial/python/lesson02",
+    "showdashboard":true,
+    "dashboards":[{"name":"Jaeger UI", "port":16686}]
+  },
+  "details":{
+    "intro":{
+      "text":"introduction.md",
+      "code":"set-env.sh",
+      "credits":"This tutorial is inspired by [Yurishkuro's OpenTracing Tutorial](https://github.com/yurishkuro/opentracing-tutorial)"
+    },
+    "steps":[
+      {
+        "title":"Trace Individual Functions",
+        "text":"trace-function.md"
+      },
+      {
+        "title":"Aggregate Spans into Single Trace",
+        "text":"combine-spans.md"
+      },
+      {
+        "title":"Propagate In-process Context",
+        "text":"propagate-spancontext.md"
+      }
+    ],
+    "finish":{
+      "text":"end.md"
+    }
+  },
+  "title":"OpenTracing Python Tutorial - Lesson 02",
+  "description":"Learn basics of OpenTracing",
+  "difficulty":"Beginner",
+  "time":"15 minutes"
+}
