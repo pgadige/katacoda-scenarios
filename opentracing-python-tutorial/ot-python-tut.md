@@ -1,1 +1,0 @@
-## OpenTracing Tutorial for Python
