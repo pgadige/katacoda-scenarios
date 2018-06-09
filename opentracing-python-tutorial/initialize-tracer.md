@@ -11,7 +11,7 @@ We define a function that returns the Tracer and call that function
 explicitly after all imports are done.
 
 <pre class="file">
-## File:hello-world.py
+## File:hello.py
 ## Initialize Jaeger Tracer
 ## using Jaeger Python client
 
