@@ -15,7 +15,7 @@ def print_hello(root_span, hello_str):
       span.log_kv({'event': 'println'})
 </pre>
 
-We know a trace as a directed acyclic graph where the nodes represent spans  
+A trace is a directed acyclic graph where the nodes represent spans  
 and the edges represent causal relationships or references between spans.  
 In the OpenTracing Specification, the edges are abstracted as `SpanReference`  
 type that consists of `SpanContext` and `ReferenceType` label.
@@ -42,6 +42,8 @@ button):
 ## simple hello world program
 
 import sys
+# modify path variable to search for lib.tracing module
+sys.path.append("/root/opentracing-tutorial/python")
 import time
 from lib.tracing import init_tracer
 
@@ -75,7 +77,7 @@ tracer.close()
 </pre>
 
 Let's run the modified python program:  
-`python2.7 -m hello.py Alice`{{execute}}
+`python2.7 -m hello Alice`{{execute}}
 
 The reported spans in the output now belong to the same trace. We observe  
 that the third hexadecimal segment in both the new spans is no longer `0`  
