@@ -11,6 +11,8 @@ below into the file (or use the `Copy to Editor` button):
 ## simple hello world program
 
 import sys
+# modify path variable to search for lib.tracing module
+sys.path.append("/root/opentracing-tutorial/python")
 import time
 from lib.tracing import init_tracer
 
@@ -52,6 +54,8 @@ button):
 ## simple hello world program
 
 import sys
+# modify path variable to search for lib.tracing module
+sys.path.append("/root/opentracing-tutorial/python")
 import time
 from lib.tracing import init_tracer
 
@@ -89,7 +93,7 @@ tracer.close()
 Let's run the above python program with a command line argument,  
 say, `Alice`:
 
-`python2.7 -m hello.py Alice`{{execute}}
+`python2.7 -m hello Alice`{{execute}}
 
 We find three spans if we observe the output carefully, each with a  s
 unique Jaeger trace ID (the first hexadecimal segment). If we search the IDs  

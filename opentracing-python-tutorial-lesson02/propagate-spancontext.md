@@ -51,6 +51,8 @@ Let's copy the code below into the file `hello.py` (or use the `Copy to Editor` 
 ## simple hello world program
 
 import sys
+# modify path variable to search for lib.tracing module
+sys.path.append("/root/opentracing-tutorial/python")
 import time
 from lib.tracing import init_tracer
 from opentracing_instrumentation.request_context import get_current_span, span_in_context
@@ -88,7 +90,7 @@ tracer.close()
 </pre>
 
 Let's run the program and find out its trace in [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello):    
-`python2.7 -m hello.py Alice`
+`python2.7 -m hello Alice`
 
 This particular change is helpful in larger programs with many functions  
 calling each other. By using `request_context` mechanism, we can access  
