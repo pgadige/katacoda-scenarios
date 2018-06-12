@@ -71,7 +71,7 @@ def format_string(hello_to):
       span.log_kv({'event': 'string-format', 'value': hello_str})
       return hello_str
 
-def print_hello(root_span, hello_str):
+def print_hello(hello_str):
   root_span = get_current_span()
   with tracer.start_span('println', child_of=root_span) as span:
       print(hello_str)
@@ -90,7 +90,7 @@ tracer.close()
 </pre>
 
 Let's run the program and find out its trace in [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search):    
-`python2.7 -m hello Alice`
+`python2.7 -m hello Alice`{{execute}}
 
 This particular change is helpful in larger programs with many functions  
 calling each other. By using `request_context` mechanism, we can access  
