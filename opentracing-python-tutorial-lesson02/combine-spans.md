@@ -83,5 +83,9 @@ The reported spans in the output now belong to the same trace. We observe
 that the third hexadecimal segment in both the new spans is no longer `0`  
 but is the value of the `root_span` Jaeger trace ID.
 
-Let's find out how the trace would look in the [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?operation=say-hello&service=hello-world). We can observe that the spans `format` and `println` are  
-causally related to the root span `say-hello`.   
+Let's find out how the trace would look in the [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search).  
+We can observe that the spans `format` and `println` are causally related to  
+the root span `say-hello`.   
+
+*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
+and operation name as either `say-hello`.
