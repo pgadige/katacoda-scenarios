@@ -39,7 +39,7 @@ time.sleep(2)
 tracer.close()
 </pre>
 
-*Note*: Observe that `init_tracer` function is moved to a separate library directory.
+*Note* :Observe that `init_tracer` function is moved to a separate library directory.
 
 Let's move the two operations - formatting and printing a string - to  
 standalone functions and wrap each function into its own span. We observe  
@@ -95,9 +95,12 @@ say, `Alice`:
 
 `python2.7 -m hello Alice`{{execute}}
 
-We find three spans if we observe the output carefully, each with a  s
-unique Jaeger trace ID (the first hexadecimal segment). If we search the IDs  
-in the [Jaeger UI's](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello) dashboard, each ID will represent a separate trace  
+We find three spans if we observe the output carefully, each with a unique  
+Jaeger trace ID (the first hexadecimal segment). If we search the IDs  
+in the [Jaeger UI's](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search) dashboard, each ID will represent a separate trace  
 with a single span. Instead, we would want to set up a relationship  
 between the two new spans - `format` and `println` - and the main span  
 `say_hello`.
+
+*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
+and operation name as either `say-hello`, `format` or `println` accordingly.

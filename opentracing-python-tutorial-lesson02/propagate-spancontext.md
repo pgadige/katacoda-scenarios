@@ -89,10 +89,13 @@ time.sleep(2)
 tracer.close()
 </pre>
 
-Let's run the program and find out its trace in [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello):    
+Let's run the program and find out its trace in [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search):    
 `python2.7 -m hello Alice`
 
 This particular change is helpful in larger programs with many functions  
 calling each other. By using `request_context` mechanism, we can access  
 the current span from any place in the program without passing the `Span`  
 object as an argument to all the function calls.
+
+*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
+and operation name as either `say-hello`.
