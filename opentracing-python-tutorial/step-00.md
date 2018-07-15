@@ -1,12 +1,13 @@
 Let's write a simple python program to print "Hello, `arg`!", where   
 `arg` is a command line argument to the program.
 
-Click the link below to open `hello.py` in the editor. The file is located at  
-`/root/opentracing-tutorial/python/lesson01/exercise`    
+Click the below link to open `hello.py` in the editor.    
 `exercise/hello.py`{{open}}
+The file is located at  
+`/root/opentracing-tutorial/python/lesson01/exercise`
 
-Once the file is opened in the editor, you can then copy the content  
-below into the file (or use the `Copy to Editor` button):
+Once the file is opened in the editor, you may copy the below content  
+into the file (or use the `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
 ## hello.py
