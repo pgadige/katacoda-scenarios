@@ -1,10 +1,10 @@
 Let's begin from where we left in lesson01. Let's rewrite our simple hello world  
-program from lesson01. Click the link below to open  
+program from lesson01. Click the below link to open  
 `hello.py` in the editor:  
 `exercise/hello.py`{{open}}
 
-Once the file is opened in the editor, you can then copy the content  
-below into the file (or use the `Copy to Editor` button):
+Once the file is opened in the editor, you can then copy the below content  
+into the file (or use the `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
 ## hello.py
@@ -39,14 +39,14 @@ time.sleep(2)
 tracer.close()
 </pre>
 
-*Note* :Observe that `init_tracer` function is moved to a separate library directory.
+*Note*: Observe that `init_tracer` function is moved to a separate library directory.
 
 Let's move the two operations - formatting and printing a string - to  
 standalone functions and wrap each function into its own span. We observe  
 that the functions `format_string` and `print_hello` are introduced in  
 the program, respectively, to format and print strings.
 
-We copy the code below into `hello.py` file (or use the `Copy to Editor`  
+We copy the below code into `hello.py` file (or use the `Copy to Editor`  
 button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
@@ -102,5 +102,7 @@ with a single span. Instead, we would want to set up a relationship
 between the two new spans - `format` and `println` - and the main span  
 `say_hello`.
 
-*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
-and operation name as either `say-hello`, `format` or `println` accordingly.
+*Note* :To see a trace in *Jaeger UI* dashboard, follow these steps:  
+1. Click **service name** drop-down list, and select `hello-world`  
+2. Click **operation name** drop-down list, and select either `say-hello`,  
+   `format` or `println`
