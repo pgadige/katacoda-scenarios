@@ -45,4 +45,4 @@ is passed as an argument to `init_jaeger_tracer` function.
 Thus, all spans emitted from the tracer are marked as originating from   
 the service `hello-world`.
 
-We have now successfully initialized an instance of Jaeger tracer.
+We have successfully initialized an instance of Jaeger tracer.

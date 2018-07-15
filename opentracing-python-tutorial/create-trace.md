@@ -56,7 +56,7 @@ tracer.close()
 
 We instrument the simple hello world program in `hello.py`.
 
-Copy the content below into the file (or click `Copy to Editor` button):
+Copy the below content into the file (or click `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
 ## a simple hello world program
@@ -102,11 +102,12 @@ time.sleep(20)
 tracer.close()
 </pre>
 
-We run the above program with command line argument, `Alice`, and should  
+We run the above program with the command line argument, `Alice`, and should  
 be able to see a span logged:  
 `python2.7 hello.py Alice`{{execute}}
 
 A visual representation of the trace in the form of a timing diagram is  
 available through [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello).    
-We select the service name as `hello-world` and the operation name as  
-`say-hello` for accessing the corresponding timing diagram.
+To access the corresponding timing diagram, follow these steps:  
+1. Click the **service name** drop-down list, select `hello-world`
+2. Click the **operation name** drop-down list, select `say-hello`
