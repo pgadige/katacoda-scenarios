@@ -1,5 +1,5 @@
 You might have noticed an unpleasant side effect of our recent changes,  
-i.e. passing a span object as the first parameter to the functions,  
+that is, passing a span object as the first parameter to the functions,  
 `format_string` and `print_hello`.
 
 Unlike Go, programming languages like Python support thread-local storage,  
@@ -44,7 +44,7 @@ Observe that we are no longer passing an instance of Span as an argument
 to the functions, `format_string` and `print_hello`, because they can now  
 retrieve the `root_span` with the `get_current_span` method.
 
-Let's copy the code below into the file `hello.py` (or use the `Copy to Editor` button):
+Let's copy the below code into the file `hello.py` (or use the `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
 ## hello.py
@@ -97,5 +97,7 @@ calling each other. By using `request_context` mechanism, we can access
 the current span from any place in the program without passing the `Span`  
 object as an argument to all the function calls.
 
-*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
-and operation name as either `say-hello`.
+*Note* :To see a trace in *Jaeger UI* dashboard, follow these steps:  
+1. Click **service name** drop-down list, and select `hello-world`  
+2. Click **operation name** drop-down list, and select `say-hello`,  
+  `format` or `println`

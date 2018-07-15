@@ -34,7 +34,7 @@ can complete its operation.
 example, `root_span` maybe the ancestor of the DAG and it does not depend  
 on completion of its child span(s).
 
-Copy the code below into `hello.py` file (or use the `Copy to Editor`  
+Copy the below code into `hello.py` file (or use the `Copy to Editor`  
 button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
@@ -87,5 +87,7 @@ Let's find out how the trace would look in the [Jaeger UI](https://[[HOST_SUBDOM
 We can observe that the spans `format` and `println` are causally related to  
 the root span `say-hello`.   
 
-*Note* :To see a trace in Jaeger UI dashboard, select service name as `hello-world`  
-and operation name as either `say-hello`.
+*Note* :To see a trace in *Jaeger UI* dashboard, follow these steps:  
+1. Click **service name** drop-down list, and select `hello-world`  
+2. Click **operation name** drop-down list, and select `say-hello`,  
+   `format` or `println`
