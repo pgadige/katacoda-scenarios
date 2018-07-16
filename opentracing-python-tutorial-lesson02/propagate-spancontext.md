@@ -10,7 +10,7 @@ API called `opentracing_instrumentation` that provides an in-memory context
 propagation facility suitable for multiple thread apps and Tornado apps via  
 its `request_context` submodule.
 
-To store top level `root_span` in the context,
+We modify `say_hello` to store top level `root_span` in the context,
 
 <pre class="file">
 from opentracing_instrumentation.request_context import get_current_span, span_in_context
@@ -21,18 +21,18 @@ def say_hello(hello_to):
     with span_in_context(span):
       hello_str = format_string(hello_to)
       print_hello(hello_str)
+</pre>
 
+Accordingly, we modify `format_string` and `print_hello` function to retrieve the main `root_span` from the context.
+
+<pre class="file">
 def format_string(hello_to):
   root_span = get_current_span()
   with tracer.start_span('format', child_of=root_span) as span:
       hello_str = 'Hello, %s!' % hello_to
       span.log_kv({'event': 'string-format', 'value': hello_str})
       return hello_str
-</pre>
 
-Accordingly, we modify `print_hello` function to save the main `root_span` in context.
-
-<pre class="file">
 def print_hello(root_span, hello_str):
   root_span = get_current_span()
   with tracer.start_span('println', child_of=root_span) as span:
