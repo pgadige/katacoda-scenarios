@@ -2,8 +2,6 @@ We use the Jaeger tracer instance initialized in the previous step
 in our simple hello world program as follows:
 
 <pre class="file">
-## File:hello.py
-
 def say_hello(hello_to):
 	## Create trace
 	span = tracer.start_span('say-hello')
@@ -24,8 +22,6 @@ It's tedious to call `finish()` manually on each given `span`. Instead, we
 can use `span` as context manager as shown below:
 
 <pre class="file">
-## File:hello.py
-
 def say_hello(hello_to):
 	## span as context manager
 	with tracer.start_span('say-hello') as span:
@@ -37,9 +33,6 @@ Since the program is short-lived and it exits immediately, we can flush
 the `span` to Jaeger backend by adding the following to `hello-world.py`:
 
 <pre class="file">
-## File:hello.py
-## Initialize Jaeger Tracer
-
 import time
 
 def say_hello(hello_to):
@@ -49,7 +42,7 @@ def say_hello(hello_to):
 		hello_str = 'Hello, %s!' % hello_to
 		print hello_str
 
-## Flush span to Jaeger backend
+# Flush span to Jaeger backend
 time.sleep(2)
 tracer.close()
 </pre>
@@ -59,10 +52,10 @@ We instrument the simple hello world program in `hello.py`.
 Copy the below content into the file (or click `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
-## a simple hello world program
-## to demonstrate instrumenting a
-## simple Python program using OpenTracing API
-## and JaegerTracing system
+# a simple hello world program
+# to demonstrate instrumenting a
+# simple Python program using OpenTracing API
+# and JaegerTracing system
 
 import sys
 import time
