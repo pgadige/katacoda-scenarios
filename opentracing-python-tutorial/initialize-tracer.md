@@ -11,10 +11,6 @@ We define a function that returns the Tracer and call that function
 explicitly after all imports are done.
 
 <pre class="file">
-## File:hello.py
-## Initialize Jaeger Tracer
-## using Jaeger Python client
-
 import logging
 from jaeger_client import Config
 
@@ -36,7 +32,7 @@ def init_jaeger_tracer(service):
 
   return config.initialize_tracer()
 
-## Initialize Jaeger Tracer
+# Initialize Jaeger Tracer
 tracer = init_jaeger_tracer('hello-world')
 </pre>
 

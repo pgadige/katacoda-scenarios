@@ -34,11 +34,11 @@ The two operations in our hello world program - formatting `hello_str`,
 and then printing it - take certain time, so we can log their completion.
 
 <pre class="file">
-## log string formatting
+# log string formatting
 hello_str = 'Hello, %s!' % hello_to
 span.log_kv({'event':'string-format', 'value':hello_str})
 
-## log string printing
+# log string printing
 print(hello_str)
 span.log_kv({'event':'println'})
 </pre>
@@ -54,10 +54,10 @@ The complete instrumented code is shown below (copy it into `hello.py` by
 clicking on `Copy to Editor` button) :
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
-## a simple hello world program
-## to demonstrate annotating a
-## trace with tags and logs
-## using JaegerTracing system
+# a simple hello world program
+# to demonstrate annotating a
+# trace with tags and logs
+# using JaegerTracing system
 
 import sys
 import time
@@ -103,5 +103,8 @@ tracer.close()
 Let's run the above program with `Bryan` as the command line argument:  
 `python2.7 hello.py Bryan`{{execute}}
 
-Now find the trace in the [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello) and expand the corresponding span by clicking on it,  
-to see the tags and logs.
+A visual representation of the trace in the form of a timing diagram is  
+available through [Jaeger UI](https://[[HOST_SUBDOMAIN]]-16686-[[KATACODA_HOST]].environments.katacoda.com/search?service=hello-world&operation=say-hello).    
+To view the corresponding timing diagram, follow these steps:  
+1. Click the **service name** drop-down list, select `hello-world`
+2. Click the **operation name** drop-down list, select `say-hello`

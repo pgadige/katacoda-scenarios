@@ -10,8 +10,7 @@ Once the file is opened in the editor, you may copy the below content
 into the file (or use the `Copy to Editor` button):
 
 <pre class="file" data-filename="exercise/hello.py" data-target="replace">
-## hello.py
-## simple hello world program
+# simple hello world program
 
 import sys
 
