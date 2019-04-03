@@ -85,6 +85,7 @@ tracer = init_jaeger_tracer('hello-world')
 
 def say_hello(hello_to):
     with tracer.start_span('say-hello') as span:
+        span.set_tag('hello_to', hello_to)
         hello_str = "Hello, %s!" % hello_to
         span.log_kv({'event':'string-format', 'value':hello_to})
 
