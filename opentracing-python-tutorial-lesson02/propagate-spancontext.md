@@ -33,7 +33,7 @@ def format_string(hello_to):
       span.log_kv({'event': 'string-format', 'value': hello_str})
       return hello_str
 
-def print_hello(root_span, hello_str):
+def print_hello(hello_str):
   root_span = get_current_span()
   with tracer.start_span('println', child_of=root_span) as span:
       print(hello_str)
